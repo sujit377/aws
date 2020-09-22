@@ -7,7 +7,7 @@ import time
 while(True):
     
     emp=[]
-    for i in range(1,87):
+    for i in range(1,30):
         url = 'https://www.yellowpages.com/south-brunswick-nj/plumbers?page='+str(i)
         r = urlopen(url)
         soup = bf(r,'lxml')
