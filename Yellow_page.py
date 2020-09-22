@@ -31,24 +31,5 @@ while(True):
                 address = "South Brunswick, NJ"
             e1.append(address)
             emp.append(e1)
-    t2 = time.time()
-    try:
-        time.sleep(3600-int(t2-t1))
-    except:
-        pass
-    print(time.asctime(time.localtime(time.time())))
-    t1 = time.time()
-    
-    t = mc.connect(host = "localhost",
-              user="root",
-              password= "jaf123",#jaf123
-              database="scraped_data")#scraped_data
-    cursor = t.cursor()
-    cursor.execute("truncate table vendor_data") #vendor_data
-    for i in emp:
-        sql = "INSERT INTO vendor_data (name,NUMBER,ADDRESS) VALUES (%s,%s,%s)" #vendor_data
-        val = [i[0],i[1],i[2]]
-        cursor.execute(sql,val)
-    t.commit()
-    t.close()
+
     
