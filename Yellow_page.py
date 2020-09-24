@@ -97,7 +97,7 @@ while(True):
         except:
             print("Error in page"+i)
             continue;
-        data =req.json
+        data =req.json()
         for j in range(len(data['result']['display']['results'])):
             e1 = []
             try:
@@ -125,7 +125,7 @@ while(True):
         except:
             print("Error in page"+i)
             continue;
-        data =req.json
+        data =req.json()
         for j in range(len(data['result']['display']['results'])):
             e1 = []
             try:
