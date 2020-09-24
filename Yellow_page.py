@@ -97,7 +97,7 @@ while(True):
         except:
             print("Error in page"+i)
             continue;
-        data =json.loads(req.text)
+        data =req.json
         for j in range(len(data['result']['display']['results'])):
             e1 = []
             try:
@@ -125,7 +125,7 @@ while(True):
         except:
             print("Error in page"+i)
             continue;
-        data =json.loads(req.text)
+        data =req.json
         for j in range(len(data['result']['display']['results'])):
             e1 = []
             try:
@@ -148,7 +148,7 @@ while(True):
  
     t2 = time.time()
     try:
-        time.sleep(3600-int(t2-t1))
+        time.sleep(600-int(t2-t1))
     except:
         pass
     print(time.asctime(time.localtime(time.time())))
