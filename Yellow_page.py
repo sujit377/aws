@@ -19,8 +19,8 @@ while(True):
         except:
             print("Error in page"+i)
             continue;
-            
-            data =req.json()
+        print(req.text)
+        data =req.json()
 
             continue;
         for j in range(len(data['result']['display']['results'])):
