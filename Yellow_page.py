@@ -22,7 +22,6 @@ while(True):
         print(req.text)
         data =req.json()
 
-            continue;
         for j in range(len(data['result']['display']['results'])):
             e1 = []
             try:
