@@ -90,6 +90,7 @@ while(True):
             emp.append(e1)
 
     for i in range(1,50):
+
         url = "https://www.justdial.com/us/data/result/getdata?uri=result&city=New-York&catid=ct-1000969324&search=Plumbers&sortBy=&state=NY&page=page-"+str(i)+"&v=9.20"
         try:
             req = requests.get(url,headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.3'})
@@ -97,7 +98,11 @@ while(True):
         except:
             print("Error in page"+i)
             continue;
-        data =req.json()
+        try:
+            data =req.json()
+        except:
+            print(i)
+            continue;
         for j in range(len(data['result']['display']['results'])):
             e1 = []
             try:
@@ -125,7 +130,11 @@ while(True):
         except:
             print("Error in page"+i)
             continue;
-        data =req.json()
+        try:
+            data =req.json()
+        except:
+            print(i)
+            continue;
         for j in range(len(data['result']['display']['results'])):
             e1 = []
             try:
