@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bf
 import requests
 import mysql.connector as mc
 import time
+import json
 
 while(True):
     
