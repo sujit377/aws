@@ -31,7 +31,7 @@ while(True):
                 address = "South Brunswick, NJ"
             e1.append(address)
             emp.append(e1)
-        for i in range(1,15):
+    for i in range(1,15):
         url = "https://www.bbb.org/search?find_country=USA&find_entity=10113-000&find_id=2990_8000-1900&find_latlng=40.727204%2C-74.058756&find_loc=Jersey%20City%2C%20NJ&find_text=Plumber&find_type=Category&page="+str(i)+"&sort=Relevance&touched=7"
         try:
             r = urlopen(url)
