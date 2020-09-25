@@ -99,9 +99,6 @@ while(True):
     t1 = time.time()
 
     t = mc.connect(host = "localhost",
-              user="root",
-              password= "jaf123",#jaf123
-              database="scraped_data")#scraped_data
     cursor = t.cursor()
     cursor.execute("truncate table vendor_data") #vendor_data
     for i in emp:
